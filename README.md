@@ -51,3 +51,5 @@ This shit took me more than 4 hours
 Around half an hour for this readme that no one will see...
 
 Damn
+
+431 words and 2332 characters (without adding this to the count)
