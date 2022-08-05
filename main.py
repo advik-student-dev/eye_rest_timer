@@ -19,14 +19,18 @@ from inputimeout import inputimeout, TimeoutOccurred
 pygame.init()
 pygame.mixer.init()
 
+# Const txt
+TXT = "pref.txt"
+
 # Initializing sound to 0
 sound = 0
 
 
+# -------FUNCTIONS-------
 # Function to read the saved file
 def reader():
     global sound  # *allowing local var to access global variable
-    file1 = open("pref.txt", "r")  # reads pref.txt
+    file1 = open(TXT, "r")  # reads pref.txt
     sound_read = file1.read()  # Store value from pref.txt as str because pref.txt is a text file
     sound = int(sound_read)
 
@@ -36,7 +40,7 @@ def saver():
     global sound  # *
     check = input("Would you like to save this preference to run it in the future(yes/no):  ").lower()
     if check == 'yes':
-        file1 = open("pref.txt", "w")  # Here, creates new file to write the preference
+        file1 = open(TXT, "w")  # Here, creates new file to write the preference
         str_sound = repr(sound)
         file1.write(str_sound)
         file1.close()  # Always have this line when opening files
@@ -45,12 +49,16 @@ def saver():
 
 
 def testprint():  # Laziness.
-    # Prolly slows down program. My fault. Wanted to be fancy
-    print("Sound Preference Test")
+    print("Preferred Sound Test")
 
 
+def sleep():
+    time.sleep(5)
+
+
+# Convoluted Try-Except block
 try:
-    open("pref.txt", "r")  # Throws FileNotFoundError if pref.txt does not exist to bypass
+    open(TXT, "r")  # Throws FileNotFoundError if pref.txt does not exist to bypass
     # try-except TimeoutOccurred block
     try:
         print("Running from a previously existing preference...")
@@ -62,7 +70,7 @@ try:
                                 "selection prompt again: ",
                                 timeout=5).lower()
         if key_press == "k":
-            os.remove("pref.txt")  # Removes pref.txt from the working directory
+            os.remove(TXT)  # Removes pref.txt from the working directory
     except TimeoutOccurred:
         reader()  # If TimeoutOccurred, then calls reader() function
 except FileNotFoundError:
@@ -79,22 +87,31 @@ Enter number:
 
     saver()  # Calls saver() func incase user wants to save the sound preference
 
+# Copy-paste the below block of code and just add a number - like 5 - to
+# add a new sound effect below these comments
+# btw, do the same thing in the timer itself
+# This one is just for testing the sound when the timer starts
+
 if sound == 4:
     testprint()
     sounda = pygame.mixer.Sound("funtimes.mp3")
     sounda.play()
+    sleep()
 if sound == 3:
     testprint()
     sounda = pygame.mixer.Sound("ara-ara.mp3")
     sounda.play()
+    sleep()
 elif sound == 2:
     testprint()
     sounda = pygame.mixer.Sound("gangsta's paradise.mp3")
     sounda.play()
+    sleep()
 elif sound == 1:
     testprint()
     sounda = pygame.mixer.Sound("notification.mp3")
     sounda.play()
+    sleep()
 
 while sound != 0:
     t = 1198
