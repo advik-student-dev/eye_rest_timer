@@ -52,4 +52,15 @@ Around half an hour for this readme that no one will see...
 
 Damn
 
-431 words and 2332 characters (without adding this to the count)
+431 words and 2332 characters (without adding the things below to the count)
+
+If this somehow gains any traction, I'll clone this repo. The clone repo can have any person's additions. I'll merge stuff there instead of this
+repo to maintain a stable version which always works and doens't break. If the additions are stable, I'll add the additions from the clone repo
+to here. But that's if this gains any traction (if even 1 person become interested in this).
+
+If you want that to happpen, just comment or do something. Like maybe raising a random issue or something to get my attention. I am a bit careless, so yeah.
+
+Hope this gets some attention. But I imagine it won't cus this mini-essay is at the bottom of the readme.md.
+Anyways, if anyone sees this... Ur cool
+
+
