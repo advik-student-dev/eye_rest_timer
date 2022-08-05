@@ -38,7 +38,7 @@ def reader():
 # Function to save a file with the preference
 def saver():
     global sound  # *
-    check = input("Would you like to save this preference to run it in the future(yes/no):  ").lower()
+    check = input("Would you like to save this preference to run it in the future(yes/no): ").lower()
     if check == 'yes':
         file1 = open(TXT, "w")  # Here, creates new file to write the preference
         str_sound = repr(sound)
