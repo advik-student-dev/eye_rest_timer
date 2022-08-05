@@ -126,17 +126,16 @@ while sound != 0:
             t -= 1
 
         if sound == 4:
-            sounda = pygame.mixer.Sound("funtimes.mp3")
-            sounda.play()
+            sound4 = pygame.mixer.Sound("funtimes.mp3")
+            sound4.play()
         if sound == 3:
-            sounda = pygame.mixer.Sound("ara-ara.mp3")
-            sounda.play()
+            sound4 = pygame.mixer.Sound("ara-ara.mp3")
+            sound4.play()
         elif sound == 2:
-            sounda = pygame.mixer.Sound("gangsta's paradise.mp3")
-            sounda.play()
+            sound2 = pygame.mixer.Sound("gangsta's paradise.mp3")
+            sound2.play()
         elif sound == 1:
-            sounda = pygame.mixer.Sound("notification.mp3")
-            sounda.play()
-
+            sound1 = pygame.mixer.Sound("notification.mp3")
+            sound1.play()
 
     countdown(int(t))
