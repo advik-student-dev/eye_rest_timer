@@ -91,8 +91,7 @@ try:
         print("You have 5 seconds to answer")
 
         # Using inputimeout to set a timer on the key_press input
-        key_press = inputimeout("Press 'S' to break to delete SOUND preference and see the SOUND "
-                                "selection prompt again: ",
+        key_press = inputimeout("Press 'S' to break to delete SOUND preference: ",
                                 timeout=5).lower()
         if key_press == "s":
             os.remove(TXT)  # Removes pref.txt from the working directory
@@ -117,9 +116,10 @@ Enter number:
 try:
     open(TXT, "r")
 except FileNotFoundError:
-    check = input("Would you like to run the timer with the default sound preference? "
-                  "Timer will quit if the answer is no(don't know how to bring the preference "
-                  "selector back, may fix later)? ").lower()
+    check = input("""
+Would you like to run the timer with the default sound preference? Timer will quit if 
+the answer is no (don't know how to bring the preference selector back, may fix later): 
+""").lower()
     if check == 'yes':
         print("Default sound preference is 1")
         sound = 1
@@ -132,7 +132,7 @@ try:  # Try-except block for timer duration
         print("Running from previously existing TIME preference...")
         time.sleep(1)
         # Using inputimeout to set a timer on the key_press input
-        key_press = inputimeout("Press 'T' to break to delete TIME preference and see the TIME ",
+        key_press = inputimeout("Press 'T' to break to delete TIME preference: ",
                                 timeout=5).lower()
         if key_press == "t":
             os.remove(TIME)  # Removes time.txt
@@ -146,7 +146,7 @@ try:  # Try-except block for timer duration
         print("Timer duration is", timer_time, "seconds =", timer_time / 60, "minutes")
 except FileNotFoundError:
     timer_time = int(input("""
-    
+---------------------    
 Timer duration setter
 1200 seconds = 20 min 
 
