@@ -210,8 +210,8 @@ while sound != 0:
             sound4 = pygame.mixer.Sound("funtimes.mp3")
             sound4.play()
         if sound == 3:
-            sound4 = pygame.mixer.Sound("ara-ara.mp3")
-            sound4.play()
+            sound3 = pygame.mixer.Sound("ara-ara.mp3")
+            sound3.play()
         elif sound == 2:
             sound2 = pygame.mixer.Sound("gangsta's paradise.mp3")
             sound2.play()
