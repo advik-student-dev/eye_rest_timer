@@ -30,7 +30,8 @@ sound = 0
 timer_time = 1200
 
 
-# -------FUNCTIONS-------
+# -------FUNCTIONS------- #
+
 # Function to read the saved sound preference file
 def reader():
     global sound  # *allowing local var to access global variable
@@ -81,6 +82,36 @@ def time_saver():
         print("Not saving your preference...")
 
 
+def sound_preference_selector():
+    global sound
+    sound = int(input("""
+Enter Sound Effect
+0 = quit
+1 = notification
+2 = gangsta's paradise
+3 = ar
+4 = EEEEEEEEEEE
+
+Enter number:
+    """))
+    return sound
+
+
+def timer_duration_selector():
+    global timer_time
+    timer_time = int(input("""
+---------------------    
+Timer duration setter
+1200 seconds = 20 min 
+
+20 minutes is default to avoid issues like audio clipping/the same audio file layering on top of itself
+
+Enter timer duration(seconds):
+    """))
+    return timer_time
+
+
+# ----------------TRY-EXCEPT BLOCKS---------------- #
 # Convoluted Try-Except block for sound preference
 try:
     open(TXT, "r")  # Throws FileNotFoundError if pref.txt does not exist to bypass
@@ -98,17 +129,7 @@ try:
     except TimeoutOccurred:
         reader()  # If TimeoutOccurred, then calls reader() function
 except FileNotFoundError:
-    sound = int(input("""
-Enter Sound Effect
-0 = quit
-1 = notification
-2 = gangsta's paradise
-3 = ar
-4 = EEEEEEEEEEE
-    
-Enter number:
-"""))
-
+    sound_preference_selector()
     saver()  # Calls saver() func incase user wants to save the sound preference
 
 # Try-except block to avoid the program running cus if this weren't here, the program would not
@@ -146,24 +167,13 @@ try:  # Try-except block for timer duration
         print("\n")
         print("Timer duration is", timer_time, "seconds =", timer_time / 60, "minutes")
 except FileNotFoundError:
-    timer_time = int(input("""
----------------------    
-Timer duration setter
-1200 seconds = 20 min 
-
-20 minutes is default to avoid issues like audio clipping/the same audio file layering on top of itself
-
-Enter timer duration(seconds):
-"""))
-
+    timer_duration_selector()
     time_saver()  # Calls time_saver() func incase user wants to save the sound preference
     print("\n")
     print("Timer duration is", timer_time, "seconds =", timer_time / 60, "minutes")
 
-# Copy-paste the below block of code and just add a number - like 5 - to
-# add a new sound effect below these comments
-# btw, do the same thing in the timer itself
-# This one is just for testing the sound when the timer starts
+
+# -----------SOUND TESTER----------- #
 
 if sound == 4:
     testprint()
@@ -182,6 +192,8 @@ elif sound == 1:
     sounda = pygame.mixer.Sound("notification.mp3")
     sounda.play()
 
+
+# ------------TIMER WHILE-LOOP------------ #
 while sound != 0:
     t = timer_time
 
