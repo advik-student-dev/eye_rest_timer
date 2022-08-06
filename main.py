@@ -131,6 +131,7 @@ try:  # Try-except block for timer duration
     try:
         print("Running from previously existing TIME preference...")
         time.sleep(1)
+        print("You have 5 seconds to answer...")
         # Using inputimeout to set a timer on the key_press input
         key_press = inputimeout("Press 'T' to break to delete TIME preference: ",
                                 timeout=5).lower()
