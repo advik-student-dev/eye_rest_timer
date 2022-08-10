@@ -25,12 +25,11 @@ pygame.mixer.init()
 TXT = "preferences/pref.txt"
 TIME = "preferences/time.txt"
 
-# Initializing sound and timer_time to 0
+# Initializing sound to 0
 sound = 0
+
+# Default timer time
 timer_time = 1200
-
-
-# -------FUNCTIONS------- #
 
 # Function to read the saved sound preference file
 def reader():
@@ -92,8 +91,7 @@ Enter Sound Effect
 3 = ar
 4 = EEEEEEEEEEE
 
-Enter number:
-    """))
+Enter number: """))
     return sound
 
 
@@ -172,7 +170,8 @@ except FileNotFoundError:
     print("\n")
     print("Timer duration is", timer_time, "seconds =", timer_time / 60, "minutes")
 
-
+# IdeaVim Test
+# Slow
 # -----------SOUND TESTER----------- #
 
 if sound == 4:
