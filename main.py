@@ -21,6 +21,7 @@ from inputimeout import inputimeout, TimeoutOccurred
 pygame.init()
 pygame.mixer.init()
 
+
 # Constants
 TXT = "preferences/pref.txt"
 TIME = "preferences/time.txt"
@@ -30,6 +31,7 @@ sound = 0
 
 # Default timer time
 timer_time = 1200
+
 
 # Function to read the saved sound preference file
 def reader():
@@ -120,8 +122,7 @@ try:
         print("You have 5 seconds to answer")
 
         # Using inputimeout to set a timer on the key_press input
-        key_press = inputimeout("Press 'S' to break to delete SOUND preference: ",
-                                timeout=5).lower()
+        key_press = inputimeout("Press 'S' to break to delete SOUND preference: ", timeout=5).lower()
         if key_press == "s":
             os.remove(TXT)  # Removes pref.txt from the working directory
     except TimeoutOccurred:
@@ -152,8 +153,7 @@ try:  # Try-except block for timer duration
         time.sleep(1)
         print("You have 5 seconds to answer...")
         # Using inputimeout to set a timer on the key_press input
-        key_press = inputimeout("Press 'T' to break to delete TIME preference: ",
-                                timeout=5).lower()
+        key_press = inputimeout("Press 'T' to break to delete TIME preference: ", timeout=5).lower()
         if key_press == "t":
             os.remove(TIME)  # Removes time.txt
         else:
