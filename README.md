@@ -63,4 +63,5 @@ If you want that to happpen, just comment or do something. Like maybe raising a 
 Hope this gets some attention. But I imagine it won't cus this mini-essay is at the bottom of the readme.md.
 Anyways, if anyone sees this... Ur cool
 
+******* IDK IF install.sh WORKS... ********
 
