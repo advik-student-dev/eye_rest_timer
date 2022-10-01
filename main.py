@@ -170,8 +170,7 @@ except FileNotFoundError:
     print("\n")
     print("Timer duration is", timer_time, "seconds =", timer_time / 60, "minutes")
 
-# IdeaVim Test
-# Slow
+
 # -----------SOUND TESTER----------- #
 
 if sound == 4:
@@ -196,7 +195,6 @@ elif sound == 1:
 while sound != 0:
     t = timer_time
 
-    # Copy-Pasted from a code learning Website
     def countdown(t):
         while t:
             mins, secs = divmod(t, 60)
