@@ -46,13 +46,6 @@ I recommend that you find a windows equivalent command of os.remove in python.
 ** May try to add this functionality. May be able to do it in the next few days because the changes are just adding more
 preference files and using another library to get the date and time from the user's computer (don't @ me. idk if those changes are enough).
 
-This shit took me more than 4 hours
-125 lines of code in 4 hours....
-Around half an hour for this readme that no one will see...
-
-Damn
-
-431 words and 2332 characters (without adding the things below to the count)
 
 If this somehow gains any traction, I'll clone this repo. The clone repo can have any person's additions. I'll merge stuff there instead of this
 repo to maintain a stable version which always works and doens't break. If the additions are stable, I'll add the additions from the clone repo
@@ -63,5 +56,5 @@ If you want that to happpen, just comment or do something. Like maybe raising a 
 Hope this gets some attention. But I imagine it won't cus this mini-essay is at the bottom of the readme.md.
 Anyways, if anyone sees this... Ur cool
 
-******* IDK IF install.sh WORKS... ********
+******* install.sh NOT TESTED ********
 
